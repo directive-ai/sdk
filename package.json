@@ -1,0 +1,60 @@
+{
+  "name": "@directive/sdk",
+  "version": "1.0.0",
+  "description": "Types TypeScript et configuration webpack pour développer des agents Directive",
+  "type": "module",
+  "main": "./dist/index.js",
+  "types": "./dist/index.d.ts",
+  "exports": {
+    ".": {
+      "import": "./dist/index.js",
+      "types": "./dist/index.d.ts"
+    },
+    "./types": {
+      "import": "./dist/types/index.js", 
+      "types": "./dist/types/index.d.ts"
+    },
+    "./webpack": {
+      "import": "./dist/webpack/webpack.config.js",
+      "types": "./dist/webpack/webpack.config.d.ts"
+    }
+  },
+  "files": [
+    "dist/**/*",
+    "README.md",
+    "LICENSE"
+  ],
+  "keywords": [
+    "directive",
+    "agents",
+    "ai",
+    "xstate",
+    "typescript",
+    "webpack"
+  ],
+  "author": "Directive Team",
+    "license": "MIT",
+  "dependencies": {
+    "@directive/types": "^1.0.0"
+  },
+  "peerDependencies": {
+    "xstate": "^5.20.0",
+    "webpack": "^5.0.0"
+  },
+  "devDependencies": {
+    "typescript": "~5.8.0",
+    "xstate": "^5.20.0",
+    "webpack": "^5.89.0"
+  },
+  "scripts": {
+    "build": "tsc",
+    "dev": "tsc --watch",
+    "clean": "rm -rf dist",
+    "prepare": "npm run build"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/directive-ai/directive.git",
+    "directory": "sdk"
+  }
+} 
